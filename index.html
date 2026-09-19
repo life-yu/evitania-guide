@@ -137,7 +137,9 @@ thead th{font-size:11px;letter-spacing:.06em;color:var(--ink-3);font-weight:600;
   background:var(--surface-2);white-space:nowrap}
 tbody tr:last-child td{border-bottom:0}
 td.n,th.n{text-align:right;white-space:nowrap}
-td.name{font-weight:500;white-space:nowrap}
+td.name{font-weight:500;white-space:normal;word-break:keep-all;min-width:9em}
+table td:last-child{word-break:keep-all}
+@media(max-width:820px){table{font-size:12.5px}th,td{padding:6px 8px}td.name{min-width:7em}}
 tbody tr:hover{background:color-mix(in srgb,var(--ink) 3%,transparent)}
 
 /* ---------- misc blocks ---------- */
@@ -270,19 +272,20 @@ footer{border-top:2px solid var(--ink);margin-top:70px;padding-block:22px 60px;c
 <main id="main">
 
 <section id="now">
-  <div class="sec-head"><span class="num">지금</span><h2>지금 여기 — 실측 4캐릭 · 배치 · 제물 1단계</h2></div>
+  <div class="sec-head"><span class="num">지금</span><h2>지금 여기 — 실측 4캐릭</h2></div>
   <p class="lede">아래 32스텝은 설계도이고, <strong>지금 어느 칸에 서 있는지와 다음에 뭘 누를지는 이 블록</strong>이 정본이다. 여기 숫자만 <strong>유저 화면 실측</strong>이라 갱신일이 붙는다. <span class="tag t-src">ATK 2026-09-14 14:06</span> <span class="tag t-src">배치·진행 2026-09-14 22:45</span> <span class="tag t-src">요툰까지 계획 2026-09-15</span> <span class="tag t-src">요툰 클리어·눈 소각 2026-09-18</span></p>
 
   <!-- NOW:BEGIN -->
 <div class="sys">
-<div class="hd"><span class="id">현재</span><h3>4캐릭 실측 — 세이브에서 직접 읽음</h3><span class="tag t-a2">09-20 00:07 기준</span></div>
+<div class="hd"><span class="id">현재</span><h3>지금 여기 — 세이브에서 직접 읽음</h3><span class="tag t-a2">09-20 00:18</span></div>
 <div class="panes">
-<div class="pane"><p class="lbl">1번 · 전사</p><p><strong>전투 75 · 채광 30 · 벌목 35</strong><br>구역 <strong>2.2</strong> · Killing Helmet<br>2,410킬/h · 15,140골드/h<br><span style="opacity:.8">Iron Helmet+7 · Iron Sword+7 · Steel Axe+7 · Steel Pickaxe+7</span></p></div>
-<div class="pane"><p class="lbl">2번 · 궁수</p><p><strong>전투 68 · 채광 29 · 벌목 36</strong><br>구역 <strong>2.6</strong> · Killing Watches<br>828킬/h · 6,501골드/h<br><span style="opacity:.8">Iron Helmet · Iron Bow · Steel Axe+6 · Steel Pickaxe+6</span></p></div>
-<div class="pane"><p class="lbl">3번 · 마법사</p><p><strong>전투 66 · 채광 33 · 벌목 35</strong><br>구역 <strong>2.5</strong> · Killing Ratatoskr<br>636킬/h · 4,748골드/h<br><span style="opacity:.8">Iron Helmet · Iron Staff · Steel Axe+6 · Steel Pickaxe+7</span></p></div>
-<div class="pane"><p class="lbl">4번 · 전사</p><p><strong>전투 59 · 채광 27 · 벌목 33</strong><br>구역 <strong>2.1</strong> · Woodcutting Ironwood Tree<br>420킬/h · 0골드/h<br><span style="opacity:.8">Iron Helmet · Iron Longsword · Steel Axe+7 · Steel Pickaxe+7</span></p></div>
-<div class="pane wide"><p class="lbl">계정</p><p>다이아 <strong>760</strong> · 금화 <strong>149,454</strong> · 재 <strong>1,001</strong> · 던전 코인 <strong>189</strong> · 보스 열쇠 <strong>3</strong><br>펫 스킨 보유 6 · 코스메틱 steam-wings, warrior-skin, rogue-skin, mage-skin</p></div>
-<div class="pane wide"><p class="lbl">이 블록은 손으로 적지 않는다</p><p>게임을 켠 상태에서 <code>save.py</code> → <code>status.py</code> 를 돌리면 세이브에서 그대로 갱신된다. 화면을 보고 받아적던 것이 밀림의 원인이었다.</p></div>
+<div class="pane"><p class="lbl">1번 · 전사 · 전투 75</p><p><strong>사냥 Helmet</strong><br>2막 2구역 · 투구투구<br>시간당 <strong>2,410</strong>킬 · 15,140골드<br><span style="opacity:.72">Iron Sword+7 · Steel Axe+7 · Steel Pickaxe+7<br>Pump Kin 42렙</span></p></div>
+<div class="pane"><p class="lbl">2번 · 궁수 · 전투 68</p><p><strong>사냥 Watches</strong><br>2막 6구역 · 시계/토륨<br>시간당 <strong>828</strong>킬 · 6,501골드<br><span style="opacity:.72">Iron Bow · Steel Axe+6 · Steel Pickaxe+6<br>Mony 50렙</span></p></div>
+<div class="pane"><p class="lbl">3번 · 마법사 · 전투 66</p><p><strong>사냥 Ratatoskr</strong><br>2막 5구역 · 라타토스크<br>시간당 <strong>636</strong>킬 · 4,748골드<br><span style="opacity:.72">Iron Staff · Steel Axe+6 · Steel Pickaxe+7<br>Basic Bat 30렙</span></p></div>
+<div class="pane"><p class="lbl">4번 · 전사 · 전투 59</p><p><strong>벌목 Ironwood Tree</strong><br>2막 1구역 · 얼음멧돼지/강철나무<br>시간당 <strong>420</strong>킬 · 0골드<br><span style="opacity:.72">Iron Longsword · Steel Axe+7 · Steel Pickaxe+7<br>Basic Bat 26렙</span></p></div>
+<div class="pane wide"><p class="lbl">지금 하면 되는 것</p><ul style="margin:.3em 0 0;padding-left:1.15em;line-height:1.8"><li><strong>[제물]</strong> 공격의 소원 14 → <strong>15</strong> <span style="opacity:.68">— 요툰 진입 조건 중 남은 것</span></li><li><strong>[다이아]</strong> 엔지니어 슬롯 <strong>3/4</strong> <span style="opacity:.68">— 보유 760</span></li><li><strong>[기술자]</strong> 상인 재고 · 설계도 탭 <strong>1/3</strong> <span style="opacity:.68">— 강화석 하루 상한 해제</span></li><li><strong>[기술자]</strong> 상인 재고 · 룬 설계도 탭 <strong>2/3</strong> <span style="opacity:.68">— 강화석 하루 상한 해제</span></li><li><strong>[사냥꾼]</strong> 14 미만 1개 <span style="opacity:.68">— 용광로 속도 훈련? 12</span></li><li><strong>[배치]</strong> 4번(전사)이 벌목 중 <span style="opacity:.68">— 강철나무는 토륨 시작할 때 몰아 캔다 — 지금 자리가 맞는지 확인</span></li></ul></div>
+<div class="pane wide"><p class="lbl">진행도 — 초록이 달성</p><p style="line-height:2"><strong>제물</strong>(요툰까지)<br><span style="display:inline-block;margin:0 12px 5px 0;white-space:nowrap">공격 <strong style="color:#ffb454">14</strong><span style="opacity:.5">/15</span></span><span style="display:inline-block;margin:0 12px 5px 0;white-space:nowrap">벌목력 <strong style="color:#4fc98a">10</strong><span style="opacity:.5">/10</span></span><span style="display:inline-block;margin:0 12px 5px 0;white-space:nowrap">치확 <strong style="color:#4fc98a">10</strong><span style="opacity:.5">/10</span></span><span style="display:inline-block;margin:0 12px 5px 0;white-space:nowrap">연료 <strong style="color:#4fc98a">5</strong><span style="opacity:.5">/5</span></span><span style="display:inline-block;margin:0 12px 5px 0;white-space:nowrap">HP <strong style="color:#4fc98a">10</strong><span style="opacity:.5">/10</span></span><br><strong>다이아 상점</strong><br><span style="display:inline-block;margin:0 12px 5px 0;white-space:nowrap">용광로 속도 <strong style="color:#4fc98a">4</strong><span style="opacity:.5">/4</span></span><span style="display:inline-block;margin:0 12px 5px 0;white-space:nowrap">엔지니어 슬롯 <strong style="color:#ffb454">3</strong><span style="opacity:.5">/4</span></span><span style="display:inline-block;margin:0 12px 5px 0;white-space:nowrap">룬 인벤 해금 <strong style="color:#ffb454">0</strong><span style="opacity:.5">/9</span></span><span style="display:inline-block;margin:0 12px 5px 0;white-space:nowrap">용광로 용량 <strong style="color:#ffb454">0</strong><span style="opacity:.5">/2</span></span><span style="display:inline-block;margin:0 12px 5px 0;white-space:nowrap">룬 소켓 <strong style="color:#ffb454">3</strong><span style="opacity:.5">/9</span></span><span style="display:inline-block;margin:0 12px 5px 0;white-space:nowrap">헌터 비용 절감 <strong style="color:#ffb454">0</strong><span style="opacity:.5">/5</span></span><br><strong>기술자</strong><br><span style="display:inline-block;margin:0 12px 5px 0;white-space:nowrap">상인 재고 · 설계도 탭 <strong style="color:#ffb454">1</strong><span style="opacity:.5">/3</span></span><span style="display:inline-block;margin:0 12px 5px 0;white-space:nowrap">상인 재고 · 룬 설계도 탭 <strong style="color:#ffb454">2</strong><span style="opacity:.5">/3</span></span><br><strong>사냥꾼</strong> 노드 21개 · 최저 <strong>12</strong>렙 · 14 미만: 용광로 속도 훈련? 12</p></div>
+<div class="pane wide"><p class="lbl">계정</p><p>다이아 <strong>760</strong> · 금화 <strong>149,454</strong> · 재 <strong>1,001</strong> · 던전 코인 <strong>189</strong> · 보스 열쇠 <strong>3</strong><br>펫 9마리(배치 4) · 오늘 활동 500 · 오늘 엘리트 593킬<br><span style="opacity:.68">이 블록은 손으로 적지 않는다 — 게임 켠 채 <code>save.py</code> → <code>status.py</code></span></p></div>
 </div></div>
 <!-- NOW:END -->
 
